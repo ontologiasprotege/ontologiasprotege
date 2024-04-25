@@ -1,0 +1,1484 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasPassenger"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "150"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#fliesTo"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#HasPotentialDelay"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "S2"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid25"
+    }, {
+      "@id" : "_:genid23"
+    }, {
+      "@id" : "_:genid19"
+    }, {
+      "@id" : "_:genid17"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid27"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasReceivedUpgradeLastYear"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "20"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasPassenger"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "150"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasCompletedFlights"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#EligibleForSpecialPromotion"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "S1"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid38"
+    }, {
+      "@id" : "_:genid36"
+    }, {
+      "@id" : "_:genid32"
+    }, {
+      "@id" : "_:genid30"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid40"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#ticketPrice"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "100"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasReceivedUpgradeLastYear"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "urn:swrl:var#f"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "10"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#f"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasCompletedFlights"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "AirportFacilities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "S3"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid12"
+    }, {
+      "@id" : "_:genid10"
+    }, {
+      "@id" : "_:genid8"
+    }, {
+      "@id" : "_:genid6"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid14"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#CandidateForUpgrade"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasWeatherAlert"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/a"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities"
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This ontology is designed to structure and analyze data collected through satisfaction surveys from passengers of Qatar Airways and Ryanair. It encompasses various aspects of the flight experience, including service quality, seat comfort, staff efficiency, and more. The ontology enables comparison of customer satisfaction across different flights, travel classes, and services offered, allowing airlines to identify areas for improvement and strengths in their service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air Passenger Experience Evaluation Ontology"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Aircraft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The vehicle used for air transport, encompassing various models and sizes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aircraft"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A company that provides air transport services for traveling passengers and freight. Specific instances include major carriers such as Qatar Airways and Ryanair."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The various amenities and services provided at the airport that contribute to the overall travel experience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AirportFacilities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Aisle_Seat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A seat adjacent to the aisle, preferred for easier access to the cabin's facilities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aisle Seat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Seat"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Baggage_Handling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The reliability and speed of processing passengers' luggage, crucial for ensuring a smooth travel experience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Baggage Handling"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Service_Quality"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Boarding_Process",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The procedures involved in getting passengers from the airport gate onto the aircraft, crucial for an on-time departure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boarding Process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Boeing_777",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Aircraft"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "http://dbpedia.org/resource/Boeing_777"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Booking_Issues",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Problems encountered during the booking or reservation process, such as errors in ticketing or difficulties in securing desired services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Booking Issues"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Incidents"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Business",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A travel class offering enhanced comfort, additional space, and premium services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Business"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Class"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Business_Traveler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A passenger traveling primarily for business purposes, often characterized by shorter stays and specific service requirements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Business Traveler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Cleanliness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The standard of cleanliness maintained in the aircraft cabin, a crucial factor for passenger comfort and health."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cabin Cleanliness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Experience"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Crew",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Airline staff members who ensure passenger safety and comfort during the flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cabin Crew"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Crew"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Experience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The overall experience of a passenger within the airplane's cabin, covering aspects from seating comfort to entertainment and cleanliness."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cabin Experience"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#CandidateForUpgrade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents passengers who are eligible for an upgrade based on specific criteria such as frequent flyer status, number of flights, or special promotions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CandidateForUpgrade"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Casual_Traveler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A passenger who travels occasionally, typically for leisure or non-regular personal reasons."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Casual Traveler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Category",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Classification of aircraft based on their size and passenger capacity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Aircraft"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Category_Rating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specific ratings provided for various aspects of the flight experience, such as comfort, service, and food."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Category Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Check-In_Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The efficiency and quality of the airline's check-in procedures, impacting the initial experience of passengers at the airport."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Check-In Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Service_Quality"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Commute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Regular travel between home and work, typically repetitive and over shorter distances."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Commute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Purpose"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Crew",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The personnel responsible for operating the flight and servicing passengers, including pilots and cabin staff"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Crew"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Customer_Satisfaction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A measure of how well the services and experiences provided by the airline meet or exceed passenger expectations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Customer Satisfaction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Dissatisfied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates that the passenger's expectations were not met during their travel experience.\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dissatisfied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Customer_Satisfaction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Domestic_Flight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A flight that takes place within the same country, typically of shorter duration and frequently operated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Domestic Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Economy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The most basic travel class offering standard amenities at the most affordable price."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Economy Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Class"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#EligibleForSpecialPromotion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EligibleForSpecialPromotion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Elite_Member",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A high-tier member of the loyalty program who receives additional privileges and benefits due to frequent travel or high spending."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Elite Member"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Loyalty_Program"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Feedback",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The responses and opinions collected from passengers through surveys, directly influencing future service improvements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Feedback"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#First_Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The highest travel class on most airlines, offering luxurious comfort and top-tier services"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "First Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Class"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An instance of air travel from one airport to another, categorized by range and duration."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight_Delays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instances where a scheduled flight does not depart at the planned time due to technical, operational, or weather-related reasons."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flight Delays"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Incidents"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight_QR905",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#operatesFlight" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Qatar_Airways"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A daily international flight from Doha to Melbourne operated by Qatar Airways."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flight QR905"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Food_and_Beverages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Covers all aspects of the meals and drinks offered during the flight, linked to the type of flight and passenger preferences."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Food and Beverages"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Frequent_Flyer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A passenger who travels frequently, typically enrolled in a loyalty program, often traveling for business."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Frequent Flyer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#HasPotentialDelay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether a flight has a potential delay due to various factors such as weather conditions at the destination airport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HasPotentialDelay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Health_and_Safety_Measures",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Protocols and practices implemented to ensure the health and safety of passengers and crew, particularly relevant in contexts such as pandemics or other public health concerns"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Health and Safety Measures"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#In-Flight_Survey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A survey conducted during the flight to gather real-time feedback on the flight experience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "In-Flight Survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Survey"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Incidents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Events or occurrences during travel that negatively impact the passenger experience, such as delays or baggage issues"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Incidents"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Inflight_Entertainment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The range of entertainment options available to passengers during the flight, such as movies, music, and games."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Inflight Entertainment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Experience"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#International_Flight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A flight that crosses international borders, requiring additional regulations and offering longer travel durations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "International Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#JohnDoe01",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasFlight" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight_QR905"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A frequent business traveler flying from Doha to Melbourne on flight QR905."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "John Doe"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Leisure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Travel undertaken for relaxation, vacation, or personal enjoyment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Leisure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Purpose"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Leisure_Traveler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A passenger traveling for leisure, vacations or to visit family and friends, usually seeking comfort and recreational activities during travel."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Leisure Traveler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Long-Haul",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A flight of long duration, usually intercontinental, covering significant distances with extended onboard services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Long-Haul"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Lounge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Exclusive areas within the airport offering comfortable seating, refreshments, and sometimes shower facilities to passengers, typically available to premium class travelers or frequent flyers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lounge"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Loyalty_Program",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A program offered by airlines to reward frequent flyers with benefits like discounts, priority services, and special offers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Loyalty Program"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Luggage_Problems",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Issues related to passenger luggage, including delays in arrival, damage, or loss during transit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Luggage Problems"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Incidents"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Member",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A registered participant in the airline's loyalty program, generally accruing miles or points for travel."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Member"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Loyalty_Program"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Middle_Seat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A seat located between the aisle and window seats, generally considered less desirable due to limited space and access"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Middle Seat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Seat"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specific model or make of an aircraft, characterized by its design and capabilities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Aircraft"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Negative_Feedback",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Feedback that criticizes or points out areas of the flight experience that need improvement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Negative Feedback"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Feedback"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Neutral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates a neither positive nor negative response from the passenger, often reflecting mixed feelings about the travel experience"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Neutral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Customer_Satisfaction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Neutral_Feedback",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Feedback that is neither positive nor negative, often providing factual statements or mixed feelings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Neutral Feedback"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Feedback"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Online_Ticket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A ticket purchased through internet platforms, often displayed digitally on mobile devices or printed at home."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Online Ticket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Overall_Rating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A general score provided by passengers that reflects their total experience on the flight."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Overall Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents an individual who travels on a flight. Different types of passengers are categorized based on the purpose and frequency of their travel."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Passenger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Physical_Ticket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A traditional paper ticket issued by airlines or travel agents."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Physical Ticket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Pilot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The trained individual responsible for flying the aircraft."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pilot"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "http://dbpedia.org/resource/Airline_pilot"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Crew"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Positive_Feedback",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Feedback that praises or positively highlights aspects of the flight experience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Positive Feedback"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Feedback"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Post-Flight_Survey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A survey conducted after the flight to assess overall satisfaction and gather suggestions for improvement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Post-Flight Survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Survey"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Pre-Flight_Survey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A survey conducted before the flight to gauge passengers' expectations and preferences."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pre-Flight Survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Survey"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Qatar_Airways",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A major international airline based in Qatar, known for its high-quality service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Qatar Airways"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "http://dbpedia.org/resource/Qatar_Airways"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Rating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Evaluations or assessments given by passengers to rate their flight experience across various dimensions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#ReceivesPriorityCheckIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether the passenger is eligible for priority check-in services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ReceivesPriorityCheckIn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ryanair",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airline"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Satisfied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates that the passenger's expectations were met or exceeded during their travel experience"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Satisfied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Customer_Satisfaction"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Seat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The passenger's assigned space on an aircraft, which varies in comfort level and location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Seat"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Seating_Comfort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A measure of how comfortable the seating arrangements are in the cabin, including legroom, seat width, and accessibility."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Seating Comfort"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Experience"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Security_Process",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The procedures and checkpoints that ensure the safety and security of passengers, impacting the ease and comfort of airport navigation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Security Process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Service_Quality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The quality of services provided by the airline staff, from check-in to baggage handling, influencing passenger satisfaction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Service Quality"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Short-Haul",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A flight of relatively short distance, typically lasting a few hours and covering regional destinations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Short-Haul"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Size",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Classification of aircraft based on their size and passenger capacity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Size"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Aircraft"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Staff_Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The effectiveness, courtesy, and professionalism of the airline staff interacting with passengers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Staff Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Service_Quality"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Survey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A structured questionnaire given to passengers to assess their satisfaction and feedback on various aspects of their flight experience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Survey"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Survey001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A post-flight survey filled out by John Doe after flying on QR905, providing feedback on his flight experience"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Post-Flight Survey for QR905"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A document or electronic record confirming a passenger's entitlement to a seat on a flight."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ticket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket1001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#ticketPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "1000.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An economy class ticket for John Doe on flight QR905, priced at 1000 USD."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ticket 1001"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Categorization of airline seats based on level of comfort, amenities offered, and ticket price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TravelClass"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Purpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The underlying reason for a passenger's journey, influencing their expectations and needs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Travel Purpose"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Window_Seat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A seat next to the window of an aircraft, often preferred for the view and the ability to lean against the side of the plane for rest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Window Seat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Seat"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#fliesFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the departure airport of a flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "flies from"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#fliesTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the destination airport of a flight."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fliesto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#flightDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "fligh tDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fligh tDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#flightNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A unique identifier assigned to a specific flight. Being functional, each flight can have only one flight number."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "flight number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasCompletedFlights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the number of flights a passenger has completed, used to track frequent flyer status and other related metrics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasCompletedFlights"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasCompletedSurvey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasCompletedSurvey"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasFlight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the flight that a passenger is booked on. This property is transitive, meaning if a passenger has a flight that connects through another flight, they indirectly have a connection with the second flight as well"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasFlightType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Denotes the type of the flight, such as international or domestic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasFlightType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasPassenger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "hasPassenger if a fligth have a person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasPassenger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasReceivedUpgradeLastYear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether the passenger has received an upgrade to a higher class of service in the past year"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasReceivedUpgradeLastYear"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasTicket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Connects a passenger to their ticket."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasTicket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasTicketForFlight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Connects a ticket to a specific flight."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasTicketForFlight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasWeatherAlert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates whether the airport is currently under a weather alert, which could impact flight schedules"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasWeatherAlert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#has_rating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Associates a flight, service, or airline with a rating given by passengers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has rating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#operatesFlight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Connects an airline to the flights it operates. This property is transitive, indicating that if an airline operates a flight, it also operates all segments of that flight."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airline"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "operates flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#passengerAge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The age of the passenger. This data helps in analyzing demographics and providing age-appropriate services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "passenger Age"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#providesService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links an airline to the services it provides, such as meals and beverages, inflight entertainment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "provides Service"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#seatRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#ticketPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "price of the ticket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ticket Price"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/a",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "add url"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "rdfs:sameAs"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "urn:swrl:var#f",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#p",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+} ]

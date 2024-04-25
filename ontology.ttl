@@ -1,0 +1,883 @@
+@prefix : <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#> .
+
+<http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology> rdf:type owl:Ontology ;
+                                                                                                  rdfs:comment "This ontology is designed to structure and analyze data collected through satisfaction surveys from passengers of Qatar Airways and Ryanair. It encompasses various aspects of the flight experience, including service quality, seat comfort, staff efficiency, and more. The ontology enables comparison of customer satisfaction across different flights, travel classes, and services offered, allowing airlines to identify areas for improvement and strengths in their service." ;
+                                                                                                  rdfs:label "Air Passenger Experience Evaluation Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty ;
+            rdfs:comment "add url" ;
+            rdfs:sameAs "rdfs:sameAs" .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#fliesFrom
+:fliesFrom rdf:type owl:ObjectProperty ;
+           rdfs:domain :Flight ;
+           rdfs:range :Airport_Facilities ;
+           rdfs:comment "Indicates the departure airport of a flight" ;
+           rdfs:label "flies from" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#fliesTo
+:fliesTo rdf:type owl:ObjectProperty ;
+         rdfs:domain :Flight ;
+         rdfs:range :Airport_Facilities ;
+         rdfs:comment "Indicates the destination airport of a flight." ;
+         rdfs:label "fliesto" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasCompletedSurvey
+:hasCompletedSurvey rdf:type owl:ObjectProperty ;
+                    rdfs:label "hasCompletedSurvey" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasFlight
+:hasFlight rdf:type owl:ObjectProperty ,
+                    owl:TransitiveProperty ;
+           rdfs:domain :Passenger ;
+           rdfs:range :Flight ;
+           rdfs:comment "Indicates the flight that a passenger is booked on. This property is transitive, meaning if a passenger has a flight that connects through another flight, they indirectly have a connection with the second flight as well" ;
+           rdfs:label "has flight" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasPassenger
+:hasPassenger rdf:type owl:ObjectProperty ;
+              rdfs:comment "hasPassenger if a fligth have a person" ;
+              rdfs:label "hasPassenger" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasTicket
+:hasTicket rdf:type owl:ObjectProperty ;
+           rdfs:domain :Passenger ;
+           rdfs:range :Ticket ;
+           rdfs:comment "Connects a passenger to their ticket." ;
+           rdfs:label "hasTicket" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasTicketForFlight
+:hasTicketForFlight rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Ticket ;
+                    rdfs:range :Flight ;
+                    rdfs:comment "Connects a ticket to a specific flight." ;
+                    rdfs:label "hasTicketForFlight" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#operatesFlight
+:operatesFlight rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Airline ;
+                rdfs:range :Flight ;
+                rdfs:comment "Connects an airline to the flights it operates. This property is transitive, indicating that if an airline operates a flight, it also operates all segments of that flight." ;
+                rdfs:label "operates flight" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#EligibleForSpecialPromotion
+:EligibleForSpecialPromotion rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:boolean ;
+                             rdfs:label "EligibleForSpecialPromotion" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#HasPotentialDelay
+:HasPotentialDelay rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Flight ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:comment "Indicates whether a flight has a potential delay due to various factors such as weather conditions at the destination airport" ;
+                   rdfs:label "HasPotentialDelay" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#ReceivesPriorityCheckIn
+:ReceivesPriorityCheckIn rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Passenger ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:comment "Indicates whether the passenger is eligible for priority check-in services." ;
+                         rdfs:label "ReceivesPriorityCheckIn" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#flightDate
+:flightDate rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "fligh tDate" ;
+            rdfs:label "fligh tDate" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#flightNumber
+:flightNumber rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Flight ;
+              rdfs:range xsd:string ;
+              rdfs:comment "A unique identifier assigned to a specific flight. Being functional, each flight can have only one flight number." ;
+              rdfs:label "flight number" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasCompletedFlights
+:hasCompletedFlights rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Passenger ;
+                     rdfs:range xsd:integer ;
+                     rdfs:comment "Represents the number of flights a passenger has completed, used to track frequent flyer status and other related metrics." ;
+                     rdfs:label "hasCompletedFlights" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasFlightType
+:hasFlightType rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Flight ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Denotes the type of the flight, such as international or domestic." ;
+               rdfs:label "hasFlightType" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasReceivedUpgradeLastYear
+:hasReceivedUpgradeLastYear rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Passenger ;
+                            rdfs:range xsd:boolean ;
+                            rdfs:comment "Indicates whether the passenger has received an upgrade to a higher class of service in the past year" ;
+                            rdfs:label "hasReceivedUpgradeLastYear" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#hasWeatherAlert
+:hasWeatherAlert rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Airport_Facilities ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:comment "Indicates whether the airport is currently under a weather alert, which could impact flight schedules" ;
+                 rdfs:label "hasWeatherAlert" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#has_rating
+:has_rating rdf:type owl:DatatypeProperty ;
+            rdfs:comment "Associates a flight, service, or airline with a rating given by passengers." ;
+            rdfs:label "has rating" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#passengerAge
+:passengerAge rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Passenger ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "The age of the passenger. This data helps in analyzing demographics and providing age-appropriate services." ;
+              rdfs:label "passenger Age" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#providesService
+:providesService rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "Links an airline to the services it provides, such as meals and beverages, inflight entertainment" ;
+                 rdfs:label "provides Service" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#seatRating
+:seatRating rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#ticketPrice
+:ticketPrice rdf:type owl:DatatypeProperty ;
+             rdfs:comment "price of the ticket" ;
+             rdfs:label "ticket Price" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:comment "The vehicle used for air transport, encompassing various models and sizes." ;
+          rdfs:label "Aircraft" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airline
+:Airline rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPassenger ;
+                           owl:qualifiedCardinality "150"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Flight
+                         ] ;
+         rdfs:comment "A company that provides air transport services for traveling passengers and freight. Specific instances include major carriers such as Qatar Airways and Ryanair." ;
+         rdfs:label "Airline" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Airport_Facilities
+:Airport_Facilities rdf:type owl:Class ;
+                    rdfs:comment "The various amenities and services provided at the airport that contribute to the overall travel experience." ;
+                    rdfs:label "AirportFacilities" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Aisle_Seat
+:Aisle_Seat rdf:type owl:Class ;
+            rdfs:subClassOf :Seat ;
+            rdfs:comment "A seat adjacent to the aisle, preferred for easier access to the cabin's facilities." ;
+            rdfs:label "Aisle Seat" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Baggage_Handling
+:Baggage_Handling rdf:type owl:Class ;
+                  rdfs:subClassOf :Service_Quality ;
+                  rdfs:comment "The reliability and speed of processing passengers' luggage, crucial for ensuring a smooth travel experience." ;
+                  rdfs:label "Baggage Handling" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Boarding_Process
+:Boarding_Process rdf:type owl:Class ;
+                  rdfs:subClassOf :Airport_Facilities ;
+                  rdfs:comment "The procedures involved in getting passengers from the airport gate onto the aircraft, crucial for an on-time departure." ;
+                  rdfs:label "Boarding Process" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Booking_Issues
+:Booking_Issues rdf:type owl:Class ;
+                rdfs:subClassOf :Incidents ;
+                rdfs:comment "Problems encountered during the booking or reservation process, such as errors in ticketing or difficulties in securing desired services." ;
+                rdfs:label "Booking Issues" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Business
+:Business rdf:type owl:Class ;
+          rdfs:subClassOf :Travel_Class ;
+          rdfs:comment "A travel class offering enhanced comfort, additional space, and premium services." ;
+          rdfs:label "Business" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Business_Traveler
+:Business_Traveler rdf:type owl:Class ;
+                   rdfs:subClassOf :Passenger ;
+                   rdfs:comment "A passenger traveling primarily for business purposes, often characterized by shorter stays and specific service requirements." ;
+                   rdfs:label "Business Traveler" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Cleanliness
+:Cabin_Cleanliness rdf:type owl:Class ;
+                   rdfs:subClassOf :Cabin_Experience ;
+                   rdfs:comment "The standard of cleanliness maintained in the aircraft cabin, a crucial factor for passenger comfort and health." ;
+                   rdfs:label "Cabin Cleanliness" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Crew
+:Cabin_Crew rdf:type owl:Class ;
+            rdfs:subClassOf :Crew ;
+            rdfs:comment "Airline staff members who ensure passenger safety and comfort during the flight" ;
+            rdfs:label "Cabin Crew" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Cabin_Experience
+:Cabin_Experience rdf:type owl:Class ;
+                  rdfs:comment "The overall experience of a passenger within the airplane's cabin, covering aspects from seating comfort to entertainment and cleanliness." ;
+                  rdfs:label "Cabin Experience" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#CandidateForUpgrade
+:CandidateForUpgrade rdf:type owl:Class ;
+                     rdfs:comment "Represents passengers who are eligible for an upgrade based on specific criteria such as frequent flyer status, number of flights, or special promotions" ;
+                     rdfs:label "CandidateForUpgrade" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Casual_Traveler
+:Casual_Traveler rdf:type owl:Class ;
+                 rdfs:subClassOf :Passenger ;
+                 rdfs:comment "A passenger who travels occasionally, typically for leisure or non-regular personal reasons." ;
+                 rdfs:label "Casual Traveler" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Category
+:Category rdf:type owl:Class ;
+          rdfs:subClassOf :Aircraft ;
+          rdfs:comment "Classification of aircraft based on their size and passenger capacity." ;
+          rdfs:label "Category" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Category_Rating
+:Category_Rating rdf:type owl:Class ;
+                 rdfs:subClassOf :Rating ;
+                 rdfs:comment "Specific ratings provided for various aspects of the flight experience, such as comfort, service, and food." ;
+                 rdfs:label "Category Rating" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Check-In_Service
+:Check-In_Service rdf:type owl:Class ;
+                  rdfs:subClassOf :Service_Quality ;
+                  rdfs:comment "The efficiency and quality of the airline's check-in procedures, impacting the initial experience of passengers at the airport." ;
+                  rdfs:label "Check-In Service" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Commute
+:Commute rdf:type owl:Class ;
+         rdfs:subClassOf :Travel_Purpose ;
+         rdfs:comment "Regular travel between home and work, typically repetitive and over shorter distances." ;
+         rdfs:label "Commute" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Crew
+:Crew rdf:type owl:Class ;
+      rdfs:comment "The personnel responsible for operating the flight and servicing passengers, including pilots and cabin staff" ;
+      rdfs:label "Crew" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Customer_Satisfaction
+:Customer_Satisfaction rdf:type owl:Class ;
+                       rdfs:comment "A measure of how well the services and experiences provided by the airline meet or exceed passenger expectations." ;
+                       rdfs:label "Customer Satisfaction" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Dissatisfied
+:Dissatisfied rdf:type owl:Class ;
+              rdfs:subClassOf :Customer_Satisfaction ;
+              rdfs:comment "Indicates that the passenger's expectations were not met during their travel experience.\"" ;
+              rdfs:label "Dissatisfied" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Domestic_Flight
+:Domestic_Flight rdf:type owl:Class ;
+                 rdfs:subClassOf :Flight ;
+                 rdfs:comment "A flight that takes place within the same country, typically of shorter duration and frequently operated." ;
+                 rdfs:label "Domestic Flight" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Economy
+:Economy rdf:type owl:Class ;
+         rdfs:subClassOf :Travel_Class ;
+         rdfs:comment "The most basic travel class offering standard amenities at the most affordable price." ;
+         rdfs:label "Economy Class" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Elite_Member
+:Elite_Member rdf:type owl:Class ;
+              rdfs:subClassOf :Loyalty_Program ;
+              rdfs:comment "A high-tier member of the loyalty program who receives additional privileges and benefits due to frequent travel or high spending." ;
+              rdfs:label "Elite Member" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Feedback
+:Feedback rdf:type owl:Class ;
+          rdfs:comment "The responses and opinions collected from passengers through surveys, directly influencing future service improvements." ;
+          rdfs:label "Feedback" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#First_Class
+:First_Class rdf:type owl:Class ;
+             rdfs:subClassOf :Travel_Class ;
+             rdfs:comment "The highest travel class on most airlines, offering luxurious comfort and top-tier services" ;
+             rdfs:label "First Class" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasPassenger ;
+                          owl:qualifiedCardinality "150"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Flight
+                        ] ;
+        rdfs:comment "An instance of air travel from one airport to another, categorized by range and duration." ;
+        rdfs:label "Flight" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight_Delays
+:Flight_Delays rdf:type owl:Class ;
+               rdfs:subClassOf :Incidents ;
+               rdfs:comment "Instances where a scheduled flight does not depart at the planned time due to technical, operational, or weather-related reasons." ;
+               rdfs:label "Flight Delays" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Food_and_Beverages
+:Food_and_Beverages rdf:type owl:Class ;
+                    rdfs:comment "Covers all aspects of the meals and drinks offered during the flight, linked to the type of flight and passenger preferences." ;
+                    rdfs:label "Food and Beverages" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Frequent_Flyer
+:Frequent_Flyer rdf:type owl:Class ;
+                rdfs:subClassOf :Passenger ;
+                rdfs:comment "A passenger who travels frequently, typically enrolled in a loyalty program, often traveling for business." ;
+                rdfs:label "Frequent Flyer" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Health_and_Safety_Measures
+:Health_and_Safety_Measures rdf:type owl:Class ;
+                            rdfs:comment "Protocols and practices implemented to ensure the health and safety of passengers and crew, particularly relevant in contexts such as pandemics or other public health concerns" ;
+                            rdfs:label "Health and Safety Measures" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#In-Flight_Survey
+:In-Flight_Survey rdf:type owl:Class ;
+                  rdfs:subClassOf :Survey ;
+                  rdfs:comment "A survey conducted during the flight to gather real-time feedback on the flight experience." ;
+                  rdfs:label "In-Flight Survey" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Incidents
+:Incidents rdf:type owl:Class ;
+           rdfs:comment "Events or occurrences during travel that negatively impact the passenger experience, such as delays or baggage issues" ;
+           rdfs:label "Incidents" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Inflight_Entertainment
+:Inflight_Entertainment rdf:type owl:Class ;
+                        rdfs:subClassOf :Cabin_Experience ;
+                        rdfs:comment "The range of entertainment options available to passengers during the flight, such as movies, music, and games." ;
+                        rdfs:label "Inflight Entertainment" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#International_Flight
+:International_Flight rdf:type owl:Class ;
+                      rdfs:subClassOf :Flight ;
+                      rdfs:comment "A flight that crosses international borders, requiring additional regulations and offering longer travel durations" ;
+                      rdfs:label "International Flight" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Leisure
+:Leisure rdf:type owl:Class ;
+         rdfs:subClassOf :Travel_Purpose ;
+         rdfs:comment "Travel undertaken for relaxation, vacation, or personal enjoyment" ;
+         rdfs:label "Leisure" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Leisure_Traveler
+:Leisure_Traveler rdf:type owl:Class ;
+                  rdfs:subClassOf :Passenger ;
+                  rdfs:comment "A passenger traveling for leisure, vacations or to visit family and friends, usually seeking comfort and recreational activities during travel." ;
+                  rdfs:label "Leisure Traveler" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Long-Haul
+:Long-Haul rdf:type owl:Class ;
+           rdfs:subClassOf :Flight ;
+           rdfs:comment "A flight of long duration, usually intercontinental, covering significant distances with extended onboard services." ;
+           rdfs:label "Long-Haul" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Lounge
+:Lounge rdf:type owl:Class ;
+        rdfs:subClassOf :Airport_Facilities ;
+        rdfs:comment "Exclusive areas within the airport offering comfortable seating, refreshments, and sometimes shower facilities to passengers, typically available to premium class travelers or frequent flyers" ;
+        rdfs:label "Lounge" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Loyalty_Program
+:Loyalty_Program rdf:type owl:Class ;
+                 rdfs:comment "A program offered by airlines to reward frequent flyers with benefits like discounts, priority services, and special offers" ;
+                 rdfs:label "Loyalty Program" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Luggage_Problems
+:Luggage_Problems rdf:type owl:Class ;
+                  rdfs:subClassOf :Incidents ;
+                  rdfs:comment "Issues related to passenger luggage, including delays in arrival, damage, or loss during transit." ;
+                  rdfs:label "Luggage Problems" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Member
+:Member rdf:type owl:Class ;
+        rdfs:subClassOf :Loyalty_Program ;
+        rdfs:comment "A registered participant in the airline's loyalty program, generally accruing miles or points for travel." ;
+        rdfs:label "Member" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Middle_Seat
+:Middle_Seat rdf:type owl:Class ;
+             rdfs:subClassOf :Seat ;
+             rdfs:comment "A seat located between the aisle and window seats, generally considered less desirable due to limited space and access" ;
+             rdfs:label "Middle Seat" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Model
+:Model rdf:type owl:Class ;
+       rdfs:subClassOf :Aircraft ;
+       rdfs:comment "Specific model or make of an aircraft, characterized by its design and capabilities." ;
+       rdfs:label "Model" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Negative_Feedback
+:Negative_Feedback rdf:type owl:Class ;
+                   rdfs:subClassOf :Feedback ;
+                   rdfs:comment "Feedback that criticizes or points out areas of the flight experience that need improvement" ;
+                   rdfs:label "Negative Feedback" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Neutral
+:Neutral rdf:type owl:Class ;
+         rdfs:subClassOf :Customer_Satisfaction ;
+         rdfs:comment "Indicates a neither positive nor negative response from the passenger, often reflecting mixed feelings about the travel experience" ;
+         rdfs:label "Neutral" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Neutral_Feedback
+:Neutral_Feedback rdf:type owl:Class ;
+                  rdfs:subClassOf :Feedback ;
+                  rdfs:comment "Feedback that is neither positive nor negative, often providing factual statements or mixed feelings." ;
+                  rdfs:label "Neutral Feedback" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Online_Ticket
+:Online_Ticket rdf:type owl:Class ;
+               rdfs:subClassOf :Ticket ;
+               rdfs:comment "A ticket purchased through internet platforms, often displayed digitally on mobile devices or printed at home." ;
+               rdfs:label "Online Ticket" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Overall_Rating
+:Overall_Rating rdf:type owl:Class ;
+                rdfs:subClassOf :Rating ;
+                rdfs:comment "A general score provided by passengers that reflects their total experience on the flight." ;
+                rdfs:label "Overall Rating" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Passenger
+:Passenger rdf:type owl:Class ;
+           rdfs:comment "Represents an individual who travels on a flight. Different types of passengers are categorized based on the purpose and frequency of their travel." ;
+           rdfs:label "Passenger" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Physical_Ticket
+:Physical_Ticket rdf:type owl:Class ;
+                 rdfs:subClassOf :Ticket ;
+                 rdfs:comment "A traditional paper ticket issued by airlines or travel agents." ;
+                 rdfs:label "Physical Ticket" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Pilot
+:Pilot rdf:type owl:Class ;
+       rdfs:subClassOf :Crew ;
+       rdfs:comment "The trained individual responsible for flying the aircraft." ;
+       rdfs:label "Pilot" ;
+       rdfs:sameAs "http://dbpedia.org/resource/Airline_pilot" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Positive_Feedback
+:Positive_Feedback rdf:type owl:Class ;
+                   rdfs:subClassOf :Feedback ;
+                   rdfs:comment "Feedback that praises or positively highlights aspects of the flight experience." ;
+                   rdfs:label "Positive Feedback" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Post-Flight_Survey
+:Post-Flight_Survey rdf:type owl:Class ;
+                    rdfs:subClassOf :Survey ;
+                    rdfs:comment "A survey conducted after the flight to assess overall satisfaction and gather suggestions for improvement." ;
+                    rdfs:label "Post-Flight Survey" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Pre-Flight_Survey
+:Pre-Flight_Survey rdf:type owl:Class ;
+                   rdfs:subClassOf :Survey ;
+                   rdfs:comment "A survey conducted before the flight to gauge passengers' expectations and preferences." ;
+                   rdfs:label "Pre-Flight Survey" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Rating
+:Rating rdf:type owl:Class ;
+        rdfs:comment "Evaluations or assessments given by passengers to rate their flight experience across various dimensions." ;
+        rdfs:label "Rating" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Satisfied
+:Satisfied rdf:type owl:Class ;
+           rdfs:subClassOf :Customer_Satisfaction ;
+           rdfs:comment "Indicates that the passenger's expectations were met or exceeded during their travel experience" ;
+           rdfs:label "Satisfied" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Seat
+:Seat rdf:type owl:Class ;
+      rdfs:comment "The passenger's assigned space on an aircraft, which varies in comfort level and location" ;
+      rdfs:label "Seat" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Seating_Comfort
+:Seating_Comfort rdf:type owl:Class ;
+                 rdfs:subClassOf :Cabin_Experience ;
+                 rdfs:comment "A measure of how comfortable the seating arrangements are in the cabin, including legroom, seat width, and accessibility." ;
+                 rdfs:label "Seating Comfort" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Security_Process
+:Security_Process rdf:type owl:Class ;
+                  rdfs:subClassOf :Airport_Facilities ;
+                  rdfs:comment "The procedures and checkpoints that ensure the safety and security of passengers, impacting the ease and comfort of airport navigation." ;
+                  rdfs:label "Security Process" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Service_Quality
+:Service_Quality rdf:type owl:Class ;
+                 rdfs:comment "The quality of services provided by the airline staff, from check-in to baggage handling, influencing passenger satisfaction." ;
+                 rdfs:label "Service Quality" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Short-Haul
+:Short-Haul rdf:type owl:Class ;
+            rdfs:subClassOf :Flight ;
+            rdfs:comment "A flight of relatively short distance, typically lasting a few hours and covering regional destinations." ;
+            rdfs:label "Short-Haul" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Size
+:Size rdf:type owl:Class ;
+      rdfs:subClassOf :Aircraft ;
+      rdfs:comment "Classification of aircraft based on their size and passenger capacity." ;
+      rdfs:label "Size" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Staff_Service
+:Staff_Service rdf:type owl:Class ;
+               rdfs:subClassOf :Service_Quality ;
+               rdfs:comment "The effectiveness, courtesy, and professionalism of the airline staff interacting with passengers." ;
+               rdfs:label "Staff Service" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Survey
+:Survey rdf:type owl:Class ;
+        rdfs:comment "A structured questionnaire given to passengers to assess their satisfaction and feedback on various aspects of their flight experience." ;
+        rdfs:label "Survey" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket
+:Ticket rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :ticketPrice ;
+                          owl:qualifiedCardinality "100"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:float
+                        ] ;
+        rdfs:comment "A document or electronic record confirming a passenger's entitlement to a seat on a flight." ;
+        rdfs:label "Ticket" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Class
+:Travel_Class rdf:type owl:Class ;
+              rdfs:comment "Categorization of airline seats based on level of comfort, amenities offered, and ticket price" ;
+              rdfs:label "TravelClass" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Travel_Purpose
+:Travel_Purpose rdf:type owl:Class ;
+                rdfs:comment "The underlying reason for a passenger's journey, influencing their expectations and needs." ;
+                rdfs:label "Travel Purpose" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Window_Seat
+:Window_Seat rdf:type owl:Class ;
+             rdfs:subClassOf :Seat ;
+             rdfs:comment "A seat next to the window of an aircraft, often preferred for the view and the ability to lean against the side of the plane for rest" ;
+             rdfs:label "Window Seat" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Boeing_777
+:Boeing_777 rdf:type owl:NamedIndividual ,
+                     :Aircraft ;
+            rdfs:sameAs "http://dbpedia.org/resource/Boeing_777" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Flight_QR905
+:Flight_QR905 rdf:type owl:NamedIndividual ,
+                       :Flight ;
+              :operatesFlight :Qatar_Airways ;
+              rdfs:comment "A daily international flight from Doha to Melbourne operated by Qatar Airways." ;
+              rdfs:label "Flight QR905" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#JohnDoe01
+:JohnDoe01 rdf:type owl:NamedIndividual ,
+                    :Passenger ;
+           :hasFlight :Flight_QR905 ;
+           rdfs:comment "A frequent business traveler flying from Doha to Melbourne on flight QR905." ;
+           rdfs:label "John Doe" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Qatar_Airways
+:Qatar_Airways rdf:type owl:NamedIndividual ,
+                        :Airline ;
+               rdfs:comment "A major international airline based in Qatar, known for its high-quality service." ;
+               rdfs:label "Qatar Airways" ;
+               rdfs:sameAs "http://dbpedia.org/resource/Qatar_Airways" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ryanair
+:Ryanair rdf:type owl:NamedIndividual ,
+                  :Airline .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Survey001
+:Survey001 rdf:type owl:NamedIndividual ,
+                    :Survey ;
+           rdfs:comment "A post-flight survey filled out by John Doe after flying on QR905, providing feedback on his flight experience" ;
+           rdfs:label "Post-Flight Survey for QR905" .
+
+
+###  http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology#Ticket1001
+:Ticket1001 rdf:type owl:NamedIndividual ,
+                     :Ticket ;
+            :ticketPrice "1000.0"^^xsd:float ;
+            rdfs:comment "An economy class ticket for John Doe on flight QR905, priced at 1000 USD." ;
+            rdfs:label "Ticket 1001" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Passenger ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasCompletedFlights ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 20 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasReceivedUpgradeLastYear ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> "false"^^xsd:boolean
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :EligibleForSpecialPromotion ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/p> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Passenger ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasCompletedFlights ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#f>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#f> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 10 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasReceivedUpgradeLastYear ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> "false"^^xsd:boolean
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CandidateForUpgrade ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "AirportFacilities" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Flight ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :fliesTo ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/a>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Airport_Facilities ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/a>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasWeatherAlert ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/a> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :HasPotentialDelay ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/kiki/ontologies/2024/3/Air_Passenger_Experience_Evaluation_Ontology/f> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
